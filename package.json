@@ -4,7 +4,6 @@
   "description": "Get appropriately sized images into your website.",
   "main": "index.js",
   "scripts": {
-    "precommit": "lint-staged",
     "format": "prettier --single-quote --write '{,lib/**/,browser/**/,test/**/}*.js'",
     "lint": "eslint .",
     "test-jest": "jest",
@@ -29,7 +28,7 @@
   },
   "homepage": "https://github.com/mapbox/appropriate-images#readme",
   "engines": {
-    "node": ">=4"
+    "node": ">=10"
   },
   "dependencies": {
     "chalk": "^1.1.3",

@@ -358,23 +358,4 @@ describe('generate only', () => {
       }
     );
   });
-
-  test('crop value errors', () => {
-    const imageConfig = {
-      osprey: {
-        basename: 'osprey.jpg',
-        sizes: [{ width: 300, crop: 'foo' }, { width: 600 }]
-      }
-    };
-    const options = { inputDirectory, outputDirectory };
-    return generate(imageConfig, options).then(
-      () => {
-        throw new Error('should have errored');
-      },
-      error => {
-        expect(error instanceof errors.UsageError).toBe(true);
-        expect(error.message).toMatch('"foo" is not a valid crop value');
-      }
-    );
-  });
 });
